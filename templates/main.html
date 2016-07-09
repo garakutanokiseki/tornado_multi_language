@@ -1,0 +1,20 @@
+<html>
+   <head>
+      <title>FriendFeed - {{ _("Sign in") }}</title>
+   </head>
+   <body>
+     <form>
+     {{ locale }}
+       <div>{{ _("Username") }} <input type="text" name="username"/></div>
+       <div>{{ _("Password") }} <input type="password" name="password"/></div>
+       <div><input type="submit" value="{{ _("Sign in") }}"/></div>
+      {% module xsrf_form_html() %}
+      <ul>
+      {% for locale_str in locales %}
+      <li>{{ locale_str }}</li>
+      {% end %}
+      </ul>
+     </form>
+   </body>
+ </html>
+ 
